@@ -10,13 +10,10 @@ import {StackModels} from '../../navigations/models';
 import {AuthUserContext} from '../../context/AuthUserContext';
 import {InventoryListContext} from '../../context/InventoryContext';
 
-import {
-  stampId,
-  checkIfItemNameExist,
-  checkWordsCount,
-} from '../../utils/constants';
+import {checkIfItemNameExist, checkWordsCount} from '../../utils/constants';
 import {COLORS, SPACING} from '../../utils/themes';
 
+import uuid from 'react-native-uuid';
 import {showMessage} from 'react-native-flash-message';
 // form
 import {useForm, Controller} from 'react-hook-form';
@@ -81,7 +78,7 @@ function AddInventory({navigation}: Props) {
 
   const onSubmit = (data: FormValues) => {
     const payload = {
-      id: stampId(),
+      id: uuid.v4(),
       userEmail: authUserStore.email,
       inventoryName: data.inventoryName,
       stockCount: data.stockCount,

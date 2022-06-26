@@ -23,12 +23,6 @@ export const combinedProvider = (...components: FC<any>[]): FC => {
   );
 };
 
-export const stampId = () => {
-  return Math.random()
-    .toString(36)
-    .replace(/[^a-z]+/g, '');
-};
-
 export const checkWordsCount = (word: string) => {
   if (word === undefined) {
     // this is a checker for YUP incase the user does not enter any words.

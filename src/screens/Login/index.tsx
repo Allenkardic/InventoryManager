@@ -8,7 +8,6 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {StackModels} from '../../navigations/models';
 import {InventoryListContext} from '../../context/InventoryContext';
 import {AuthUserContext} from '../../context/AuthUserContext';
-import {stampId} from '../../utils/constants';
 import {
   BORDERRADIUS,
   BOXWITHSHADOW,
@@ -16,6 +15,9 @@ import {
   COLORS,
   SPACING,
 } from '../../utils/themes';
+
+import uuid from 'react-native-uuid';
+
 // form
 import {useForm, Controller} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -37,6 +39,9 @@ type FormValues = {
 };
 
 function Login(props: Props) {
+  // states
+  const [secureEntry, setSecureEntry] = React.useState(true);
+
   // validation schema
   const schema = yup.object().shape({
     email: yup.string().email().required('Email is required'),
@@ -64,7 +69,7 @@ function Login(props: Props) {
 
   const onSubmit = (data: FormValues) => {
     const payload = {
-      id: stampId(),
+      id: uuid.v4(),
       email: data.email,
       password: data.password,
       isAuth: true,
@@ -106,6 +111,9 @@ function Login(props: Props) {
               label="Password"
               backgroundColor={COLORS.lightWhite}
               error={errors.password?.message}
+              iconName={'password'}
+              secureTextEntry={secureEntry}
+              onPressIcon={() => setSecureEntry(!secureEntry)}
             />
           )}
           name="password"

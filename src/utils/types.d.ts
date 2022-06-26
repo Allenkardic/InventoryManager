@@ -93,7 +93,7 @@ export interface InputProps {
   secureTextEntry?: boolean;
   onPressIcon?: function;
   error?: string;
-  onBlur?: boolean;
+  onBlur?: function;
   autoCorrect?: boolean;
   selectTextOnFocus?: boolean;
   autoCapitalize?: 'characters' | 'words' | 'sentences' | 'none';

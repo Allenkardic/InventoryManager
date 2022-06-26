@@ -64,9 +64,9 @@ function CustomInput(props: InputProps): JSX.Element {
           style={[
             {
               ...styles.inputContainer,
-              //   height: Platform.OS == 'android' ? HP('7%') : HP('5%'),
+
               height: multiline ? HP('10%') : HP('5%'),
-              width: iconName == 'password' ? '93%' : '100%',
+              width: iconName == 'password' ? '90%' : '100%',
             },
           ]}
           placeholder={placeholder}
@@ -84,7 +84,10 @@ function CustomInput(props: InputProps): JSX.Element {
           defaultValue={defaultValue}
         />
         {iconName === 'password' && (
-          <View>
+          <View
+            style={{
+              width: '10%',
+            }}>
             {secureTextEntry ? (
               <Icon
                 onPress={onPressIcon}

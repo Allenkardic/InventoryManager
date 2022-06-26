@@ -214,6 +214,7 @@ Array [
                     onChangeText={[Function]}
                     placeholder="ex: p@ss"
                     placeholderTextColor="#0A0A0A80"
+                    secureTextEntry={true}
                     selectTextOnFocus={true}
                     style={
                       Array [
@@ -221,12 +222,42 @@ Array [
                           "height": 66.5,
                           "lineHeight": 0,
                           "paddingLeft": 24,
-                          "width": "100%",
+                          "width": "90%",
                         },
                       ]
                     }
                     underlineColorAndroid="transparent"
                   />
+                  <View
+                    style={
+                      Object {
+                        "width": "10%",
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      onPress={[Function]}
+                      selectable={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#ABAFB3",
+                            "fontSize": 40,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "Feather",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
