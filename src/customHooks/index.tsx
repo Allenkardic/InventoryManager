@@ -9,7 +9,6 @@ export const usePersistState = (storageKey: string, initialState: any) => {
     async function asyncEffect() {
       // Retrieve the data from the store.
       try {
-        // let storageInApp;
         const currentStorageStateInApp = await AsyncStorage.getItem(storageKey);
         const storageInApp =
           currentStorageStateInApp != null

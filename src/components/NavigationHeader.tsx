@@ -1,8 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TextStyle, Platform} from 'react-native';
-
-import {HP, FONTSIZE, COLORS, SIZES, SPACING} from '../utils/themes';
-
+// components
+import {HP, COLORS, SPACING} from '../utils/themes';
 import type {CustomHeaderProps} from '../utils/types';
 import CustomText from './CustomText';
 // @ts-ignore
@@ -23,7 +22,6 @@ function NavigationHeader(props: CustomHeaderProps) {
     backgroundColor = COLORS.white,
     onPressBackBtn,
   } = props;
-
   return (
     <View style={{...styles.container, backgroundColor: backgroundColor}}>
       <View style={{...styles.leftContent}}>

@@ -10,14 +10,11 @@ import {InventoryListContext} from '../../context/InventoryContext';
 import {AuthUserContext} from '../../context/AuthUserContext';
 import {
   BORDERRADIUS,
-  BOXWITHSHADOW,
   BOXWITHSMALLSHADOW,
   COLORS,
   SPACING,
 } from '../../utils/themes';
-
 import uuid from 'react-native-uuid';
-
 // form
 import {useForm, Controller} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -42,6 +39,9 @@ function Login(props: Props) {
   // states
   const [secureEntry, setSecureEntry] = React.useState(true);
 
+  // context
+  const {setAuthUserStore} = React.useContext(AuthUserContext);
+
   // validation schema
   const schema = yup.object().shape({
     email: yup.string().email().required('Email is required'),
@@ -56,16 +56,6 @@ function Login(props: Props) {
   } = useForm<FormValues>({
     resolver: yupResolver(schema),
   });
-
-  const {inventoryStore, setInventoryStore} =
-    React.useContext(InventoryListContext);
-
-  const {setAuthUserStore} = React.useContext(AuthUserContext);
-
-  interface User {
-    firstname: string;
-    age: number;
-  }
 
   const onSubmit = (data: FormValues) => {
     const payload = {

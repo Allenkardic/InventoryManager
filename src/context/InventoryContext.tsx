@@ -24,26 +24,17 @@ interface Props {
   children?: any;
 }
 
+// provider for the Inventory data
 export const InventoryListProvider: React.ComponentType<Props> = ({
   children,
 }) => {
-  // this is the old code to store states
-  //   const [inventoryStore, setInventoryStore] = useState<InventoryStoreItem[]>(
-  //     [],
-  //   );
+  // usePersisState takes two params (key and value) then stores this data in asyncstorage
   const [inventoryStore, setInventoryStore] = usePersistState(
     'inventoryData',
     [],
   );
-
-  //   to improve performance by updating app store when inventorestore changes
-  //   const providerInventoryStore = useMemo(
-  //     () => ({inventoryStore, setInventoryStore}),
-  //     [],
-  //   );
   return (
     <InventoryListContext.Provider value={{inventoryStore, setInventoryStore}}>
-      {/* <InventoryListContext.Provider value={providerInventoryStore}> */}
       {children}
     </InventoryListContext.Provider>
   );

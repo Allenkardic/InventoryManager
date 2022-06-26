@@ -1,14 +1,7 @@
-import React, {ReactNode} from 'react';
-import {
-  Text,
-  StyleSheet,
-  Platform,
-  TextStyle,
-  ViewStyle,
-  View,
-  TextInput,
-} from 'react-native';
-import {HP, WP, COLORS, SPACING, BORDERRADIUS} from '../utils/themes';
+import React from 'react';
+import {StyleSheet, Platform, TextStyle, View, TextInput} from 'react-native';
+// components
+import {HP, COLORS, SPACING, BORDERRADIUS} from '../utils/themes';
 import type {InputProps} from '../utils/types';
 import CustomText from './CustomText';
 // @ts-ignore
@@ -28,12 +21,9 @@ function CustomInput(props: InputProps): JSX.Element {
     onChangeText,
     backgroundColor,
     onFocus,
-    style,
     secureTextEntry,
     error,
-    onBlur,
     keyboardType,
-    onLabelInfoClick,
     multiline = false,
     editable,
     onPressIcon,

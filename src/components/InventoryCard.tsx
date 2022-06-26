@@ -1,21 +1,7 @@
-import React, {ReactNode} from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  Platform,
-  TextStyle,
-  ViewStyle,
-  TouchableOpacity,
-} from 'react-native';
-
-import {
-  BORDERRADIUS,
-  BOXWITHSHADOW,
-  COLORS,
-  FONTSIZE,
-  SPACING,
-} from '../utils/themes';
+import React from 'react';
+import {View, StyleSheet, TextStyle, TouchableOpacity} from 'react-native';
+// components
+import {BORDERRADIUS, BOXWITHSHADOW, COLORS, SPACING} from '../utils/themes';
 import type {InventoryCardProps} from '../utils/types';
 import CustomText from './CustomText';
 import {currencyFormat} from '../utils/constants';
@@ -27,7 +13,6 @@ type Style = {
 
 function InventoryCard(props: InventoryCardProps): JSX.Element {
   const {inventoryName, stockCount, price, description, onPress} = props;
-
   return (
     <TouchableOpacity onPress={onPress} style={{...styles.container}}>
       <View style={{...styles.contentContainer}}>

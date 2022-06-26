@@ -63,10 +63,6 @@ export const SIZES: SizesConfig = {
   xlarge: 20,
   xxlarge: 24,
   xxxlarge: 28,
-
-  //dimensions
-  //   screenWidth,
-  //   screenHeight,
 };
 
 export const FONTS: object = {
@@ -92,7 +88,6 @@ const scaledSize = (size: number): number => Math.ceil(size * scale);
 
 // guideline height for standard 5" device screen is 680
 function RFValue(fontSize: number): number {
-  // const {height, width} = Dimensions.get('window');
   const standardScreenHeight: number = 680;
   const {width, height}: {width: number; height: number} =
     Dimensions.get('window');

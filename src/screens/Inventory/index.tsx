@@ -1,23 +1,12 @@
 import React, {RefObject} from 'react';
-import {
-  StyleSheet,
-  FlatList,
-  Text,
-  View,
-  ListRenderItemInfo,
-  Image,
-} from 'react-native';
-
-import CustomText from '../../components/CustomText';
-import CustomInput from '../../components/CustomInput';
-import BottomSheet from '../../components/BottomSheet';
+import {FlatList, View, ListRenderItemInfo} from 'react-native';
+// components
 import InventoryCard from '../../components/InventoryCard';
-import CustomButton from '../../components/CustomButton';
 import PlusButton from '../../components/PlusButton';
 import NavigationHeader from '../../components/NavigationHeader';
 import EmptyList from '../../components/EmptyList';
 
-import {useForm, Controller} from 'react-hook-form';
+import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -34,42 +23,23 @@ import Icon from 'react-native-vector-icons/Feather';
 type Props = NativeStackScreenProps<StackModels, 'Inventory'>;
 
 function Inventory({navigation}: Props) {
-  // validation schema
-  const schema = yup.object().shape({
-    inventoryName: yup.string().required('Inventory name is required'),
-    price: yup.string().required('Price name is required'),
-    description: yup.string().required('Description of item is required'),
-    stockCount: yup.string().required('Number of items remaining is required'),
-  });
-
-  // React Hook Form
-  const {
-    control,
-    handleSubmit,
-    formState: {errors},
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
-
-  const {authUserStore, setAuthUserStore} = React.useContext(AuthUserContext);
-  const {inventoryStore, setInventoryStore} =
-    React.useContext(InventoryListContext);
-
   // states
-  // const [inventoryList, setInventoryList] = React.useState<InventoryCardProps[]>([]);
   const [inventoryList, setInventoryList] = React.useState<any>([]);
+  // context
+  const {authUserStore, setAuthUserStore} = React.useContext(AuthUserContext);
+  const {inventoryStore} = React.useContext(InventoryListContext);
+
+  React.useEffect(() => {
+    // this checks and returns inventory list based on the sign in users email
+    const inventoryByUser = inventoryStore.filter(
+      item => item.userEmail === authUserStore.email,
+    );
+    setInventoryList(inventoryByUser);
+  }, [inventoryStore]);
 
   const handleLogout = () => {
     setAuthUserStore({});
   };
-
-  React.useEffect(() => {
-    const inventoryByUser = inventoryStore.filter(
-      item => item.userEmail === authUserStore.email,
-    );
-
-    setInventoryList(inventoryByUser);
-  }, [inventoryStore]);
 
   const handleOnPresscard = (item: InventoryCardProps) => {
     const screenData: InventoryCardProps = item;

@@ -1,4 +1,4 @@
-import React, {ComponentProps, FC, ReactNode} from 'react';
+import React, {ComponentProps, FC} from 'react';
 import {CURRENCIES} from './themes';
 import {InventoryStoreItem} from '../context/InventoryContext';
 

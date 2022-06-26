@@ -1,9 +1,8 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, TextStyle} from 'react-native';
-
+// components
 import {COLORS, HP, WP, BOXWITHBIGSHADOW} from '../utils/themes';
 import type {PlusButtonProps} from '../utils/types';
-
 // @ts-ignore
 import Icon from 'react-native-vector-icons/Feather';
 

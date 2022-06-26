@@ -1,5 +1,5 @@
-import React, {ReactNode} from 'react';
-import {Text, StyleSheet, Platform, TextStyle, ViewStyle} from 'react-native';
+import React from 'react';
+import {Text, StyleSheet, Platform, TextStyle} from 'react-native';
 
 import {FONTSIZE} from '../utils/themes';
 import type {TextProps} from '../utils/types';
@@ -27,6 +27,7 @@ type Style = {
 
 function CustomText(props: TextProps): JSX.Element {
   const {
+    // font sizes
     mini,
     base,
     small,
@@ -36,13 +37,13 @@ function CustomText(props: TextProps): JSX.Element {
     xlarge,
     xxlarge,
     xxxlarge,
-
+    // font weight
     regular,
     bold,
     semibold,
     lightbold,
     light200,
-
+    // others
     color,
     left,
     right,

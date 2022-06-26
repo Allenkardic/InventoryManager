@@ -6,20 +6,17 @@ import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {StackModels} from '../../navigations/models';
+import {checkWordsCount} from '../../utils/constants';
+import {COLORS, SPACING} from '../../utils/themes';
 // context
 import {AuthUserContext} from '../../context/AuthUserContext';
 import {InventoryListContext} from '../../context/InventoryContext';
-
-import {checkWordsCount} from '../../utils/constants';
-import {COLORS, SPACING} from '../../utils/themes';
-import type {InventoryCardProps} from '../../utils/types';
+// import
 import {showMessage} from 'react-native-flash-message';
 // form
 import {useForm, Controller} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-// @ts-ignore
-import Icon from 'react-native-vector-icons/Feather';
 
 type Style = {
   formContainer: TextStyle;
@@ -83,7 +80,7 @@ function EditInventory({navigation, route}: Props) {
 
     showMessage({
       type: 'success',
-      message: 'Item deleted successfuly',
+      message: 'Item updated successfuly',
     });
     navigation.navigate('Inventory');
   };
@@ -93,10 +90,9 @@ function EditInventory({navigation, route}: Props) {
       el => el.id !== screenData?.id,
     );
     setInventoryStore(updatedInventory);
-
     showMessage({
       type: 'success',
-      message: 'Item updated successfuly',
+      message: 'Item deleted successfuly',
     });
     navigation.navigate('Inventory');
   };
@@ -163,7 +159,6 @@ function EditInventory({navigation, route}: Props) {
             name="price"
             defaultValue={screenData?.price.toString()}
           />
-
           <Controller
             control={control}
             render={({field: {onChange, onBlur, value}}) => (
@@ -219,7 +214,6 @@ function EditInventory({navigation, route}: Props) {
     </>
   );
 }
-
 const styles = StyleSheet.create<Style>({
   formContainer: {
     paddingTop: SPACING.small,

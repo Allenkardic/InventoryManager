@@ -1,27 +1,14 @@
 import React, {useState} from 'react';
 import {
   View,
-  Text,
   TouchableOpacity,
-  Touchable,
-  Pressable,
   StyleSheet,
   Platform,
   TextStyle,
 } from 'react-native';
-
-//import components
+//components
 import CustomText from './CustomText';
-
-import {
-  BORDERRADIUS,
-  COLORS,
-  HP,
-  WP,
-  BOXWITHSMALLSHADOW,
-  BOXWITHSHADOW,
-} from '../utils/themes';
-
+import {BORDERRADIUS, COLORS, HP, BOXWITHSMALLSHADOW} from '../utils/themes';
 import type {CustomButtonProps} from '../utils/types';
 
 type Style = {
@@ -47,7 +34,7 @@ function CustomButton(props: CustomButtonProps) {
         backgroundColor: disabled ? COLORS.midGrey : btnBackgroundColor,
       }}>
       <View>
-        <CustomText large style={{color: btnColor}} bold>
+        <CustomText normal style={{color: btnColor}} bold>
           {title}
         </CustomText>
       </View>

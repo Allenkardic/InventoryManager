@@ -306,8 +306,7 @@ Array [
                       Object {
                         "color": "#e4e8e5",
                         "fontFamily": "Montserrat-Bold",
-                        "fontSize": 39,
-                        "lineHeight": 0,
+                        "fontSize": 27,
                       }
                     }
                   >

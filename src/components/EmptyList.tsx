@@ -1,13 +1,5 @@
-import React, {ReactNode} from 'react';
-import {
-  Text,
-  Image,
-  StyleSheet,
-  Platform,
-  TextStyle,
-  View,
-  ViewStyle,
-} from 'react-native';
+import React from 'react';
+import {Image, StyleSheet, TextStyle, View} from 'react-native';
 import {HP, WP, SPACING, IMAGES} from '../utils/themes';
 
 import CustomText from './CustomText';

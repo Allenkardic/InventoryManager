@@ -5,5 +5,4 @@ export type StackModels = {
   Inventory: undefined;
   AddInventory: undefined;
   EditInventory: undefined | {screenData: InventoryCardProps};
-  InventoryDetails: undefined | {screenData?: object};
 };

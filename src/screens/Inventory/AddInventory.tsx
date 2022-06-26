@@ -6,13 +6,12 @@ import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {StackModels} from '../../navigations/models';
+import {checkIfItemNameExist, checkWordsCount} from '../../utils/constants';
+import {COLORS, SPACING} from '../../utils/themes';
 // context
 import {AuthUserContext} from '../../context/AuthUserContext';
 import {InventoryListContext} from '../../context/InventoryContext';
-
-import {checkIfItemNameExist, checkWordsCount} from '../../utils/constants';
-import {COLORS, SPACING} from '../../utils/themes';
-
+// imports
 import uuid from 'react-native-uuid';
 import {showMessage} from 'react-native-flash-message';
 // form
@@ -95,8 +94,6 @@ function AddInventory({navigation}: Props) {
     });
     navigation.navigate('Inventory');
   };
-
-  // console.log(checkIfItemNameExist('allen', inventoryStore), 'storesss');
   return (
     <>
       <View>
