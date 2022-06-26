@@ -48,7 +48,7 @@ function EditInventory({navigation, route}: Props) {
       .string()
       .test(
         'description',
-        'Description not be less than 3 words',
+        'Description must not be less than 3 words',
         (value: any) => checkWordsCount(value) >= 3,
       ),
     price: yup.number().required('Price is required'),
