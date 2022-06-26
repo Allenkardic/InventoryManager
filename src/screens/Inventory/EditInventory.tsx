@@ -38,7 +38,7 @@ type FormValues = {
 };
 
 function EditInventory({navigation, route}: Props) {
-  const screenData = route.params?.screenData;
+  const screenData = route?.params?.screenData;
 
   // validation schema
   const schema = yup.object().shape({
@@ -212,6 +212,7 @@ function EditInventory({navigation, route}: Props) {
             btnBackgroundColor={COLORS.red}
             title="Delete"
             onPress={handleDeletePress}
+            testID="delete-btn"
           />
         </View>
       </View>

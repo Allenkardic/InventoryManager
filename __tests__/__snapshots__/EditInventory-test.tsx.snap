@@ -426,6 +426,7 @@ Array [
             "width": "100%",
           }
         }
+        testID="delete-btn"
       >
         <View>
           <Text

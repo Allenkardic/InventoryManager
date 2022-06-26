@@ -147,6 +147,7 @@ export interface CustomButtonProps {
   disabled?: boolean;
   title: string;
   onPress: function;
+  testID?: string;
 }
 
 export interface CustomHeaderProps {

@@ -35,9 +35,11 @@ function CustomButton(props: CustomButtonProps) {
     onPress,
     title,
     disabled = false,
+    testID,
   } = props;
   return (
     <TouchableOpacity
+      testID={testID}
       onPress={disabled ? null : onPress}
       style={{
         ...styles.container,
