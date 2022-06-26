@@ -9,9 +9,7 @@
  */
 
 import React from 'react';
-
 import Entry from './src/navigations/Entry';
-
 import FlashMessage from 'react-native-flash-message';
 import {AppContextProvider} from './src/context';
 

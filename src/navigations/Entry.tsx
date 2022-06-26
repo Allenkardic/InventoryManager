@@ -4,10 +4,7 @@ import React, {useContext} from 'react';
 // import Product from '../screens/Product';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {
-  createNativeStackNavigator,
-  NativeStackScreenProps,
-} from '@react-navigation/native-stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import type {StackModels} from './models';
 
