@@ -15,7 +15,7 @@ const createTestProps = (props: Object) => ({
   ...props,
 });
 
-describe('Inventory Screen', () => {
+describe('Inventory Screen uses props', () => {
   it('renders correctly', () => {
     let props: any;
     props: createTestProps;
