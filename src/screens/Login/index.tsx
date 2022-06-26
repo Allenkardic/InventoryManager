@@ -44,8 +44,8 @@ function Login(props: Props) {
 
   // validation schema
   const schema = yup.object().shape({
-    email: yup.string().email().required('Email is required'),
-    password: yup.string().required('Password is required'),
+    email: yup.string().email().trim().required('Email is required'),
+    password: yup.string().trim().required('Password is required'),
   });
 
   // React Hook Form
