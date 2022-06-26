@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inventory Screen renders correctly 1`] = `
+Array [
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#f5f5f5",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingHorizontal": 12,
+          "paddingTop": 96,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignSelf": "flex-start",
+            "width": "10%",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          onPress={[Function]}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "#121515",
+                "fontSize": 40,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "width": "80%",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Object {
+              "alignContent": "center",
+              "alignItems": "center",
+              "fontSize": 31,
+              "justifyContent": "center",
+              "textAlign": "center",
+            }
+          }
+        >
+          Add Inventory
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      />
+    </View>
+  </View>,
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 48,
+            "paddingTop": 64,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "marginBottom": 48,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Object {
+                "color": "#0A0A0A80",
+                "fontSize": 20,
+                "marginBottom": 4,
+                "paddingLeft": 12,
+              }
+            }
+          >
+            Item name
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fafafa",
+                "borderColor": "#DDDDDD",
+                "borderRadius": 10,
+                "borderWidth": 1,
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "100%",
+              }
+            }
+          >
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              multiline={false}
+              numberOfLines={4}
+              onChangeText={[Function]}
+              placeholder="ex: book"
+              placeholderTextColor="#0A0A0A80"
+              selectTextOnFocus={true}
+              style={
+                Array [
+                  Object {
+                    "height": 66.5,
+                    "lineHeight": 0,
+                    "paddingLeft": 24,
+                    "width": "100%",
+                  },
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 48,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Object {
+                "color": "#0A0A0A80",
+                "fontSize": 20,
+                "marginBottom": 4,
+                "paddingLeft": 12,
+              }
+            }
+          >
+            Price
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fafafa",
+                "borderColor": "#DDDDDD",
+                "borderRadius": 10,
+                "borderWidth": 1,
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "100%",
+              }
+            }
+          >
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType="number-pad"
+              multiline={false}
+              numberOfLines={4}
+              onChangeText={[Function]}
+              placeholder="ex: 200"
+              placeholderTextColor="#0A0A0A80"
+              selectTextOnFocus={true}
+              style={
+                Array [
+                  Object {
+                    "height": 66.5,
+                    "lineHeight": 0,
+                    "paddingLeft": 24,
+                    "width": "100%",
+                  },
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 48,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Object {
+                "color": "#0A0A0A80",
+                "fontSize": 20,
+                "marginBottom": 4,
+                "paddingLeft": 12,
+              }
+            }
+          >
+            Count
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fafafa",
+                "borderColor": "#DDDDDD",
+                "borderRadius": 10,
+                "borderWidth": 1,
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "100%",
+              }
+            }
+          >
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType="number-pad"
+              multiline={false}
+              numberOfLines={4}
+              onChangeText={[Function]}
+              placeholder="ex: 10"
+              placeholderTextColor="#0A0A0A80"
+              selectTextOnFocus={true}
+              style={
+                Array [
+                  Object {
+                    "height": 66.5,
+                    "lineHeight": 0,
+                    "paddingLeft": 24,
+                    "width": "100%",
+                  },
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 24,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Object {
+                "color": "#0A0A0A80",
+                "fontSize": 20,
+                "marginBottom": 4,
+                "paddingLeft": 12,
+              }
+            }
+          >
+            Description
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fafafa",
+                "borderColor": "#DDDDDD",
+                "borderRadius": 10,
+                "borderWidth": 1,
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "100%",
+              }
+            }
+          >
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              multiline={true}
+              numberOfLines={4}
+              onChangeText={[Function]}
+              placeholder="A brief description"
+              placeholderTextColor="#0A0A0A80"
+              selectTextOnFocus={true}
+              style={
+                Array [
+                  Object {
+                    "height": 133.5,
+                    "lineHeight": 0,
+                    "paddingLeft": 24,
+                    "width": "100%",
+                  },
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+  <View
+    style={
+      Object {
+        "paddingBottom": 48,
+        "paddingHorizontal": 48,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#032e90",
+          "borderRadius": 20,
+          "elevation": 1,
+          "height": 80,
+          "justifyContent": "center",
+          "opacity": 1,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 2,
+          "width": "100%",
+        }
+      }
+    >
+      <View>
+        <Text
+          allowFontScaling={false}
+          style={
+            Object {
+              "color": "#e4e8e5",
+              "fontFamily": "Montserrat-Bold",
+              "fontSize": 39,
+              "lineHeight": 0,
+            }
+          }
+        >
+          Submit
+        </Text>
+      </View>
+    </View>
+  </View>,
+]
+`;

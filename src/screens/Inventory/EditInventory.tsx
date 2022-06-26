@@ -40,35 +40,10 @@ type FormValues = {
 function EditInventory({navigation, route}: Props) {
   const screenData = route.params?.screenData;
 
-  // states
-  const [descriptionValue, setDescriptionValue] = React.useState('');
-
-  const ss = 'dd hhh';
-
-  console.log(checkWordsCount(ss), 'jj');
-  // checkWordsCount(descriptionValue)
   // validation schema
   const schema = yup.object().shape({
-    isCompany: yup.boolean(),
-    // isCompany: yup
-    //   .string()
-    //   .test(
-    //     'is boolean',
-    //     'Please enter either 1 or 0',
-    //     value => value === 'yes' || value === 'no',
-    //   ),
     inventoryName: yup.string().required('Inventory name is required').trim(),
     stockCount: yup.number().required('Stock count left is required'),
-    // description: yup
-    //   .string()
-    //   .required('Brief descripting is required')
-    //   .when(yup.ref('$ss'),{
-    //     is: true,
-    //     then: yup.string().required('required'),
-    //     otherwise: yup.string()
-    // })
-    //   }),
-
     description: yup
       .string()
       .test(
@@ -76,13 +51,6 @@ function EditInventory({navigation, route}: Props) {
         'Description not be less than 3 words',
         (value: any) => checkWordsCount(value) >= 3,
       ),
-    // yup.string().required('minimum description is 3').mixed().oneOf([2]).isValid(2)
-
-    // yup.string().required('Brief descripting is required'),
-
-    // description: yup.array().min(3, 'hellow'),
-
-    // .min(3, ({min}) => `Description must be greater than 3 wor`),
     price: yup.number().required('Price is required'),
   });
 
@@ -148,13 +116,6 @@ function EditInventory({navigation, route}: Props) {
     );
   };
 
-  // const checkWordsCount = (word: string) => {
-  //   const tremWords = word.trim().split(' ');
-  //   return tremWords.length;
-  // };
-
-  // console.log(checkWordsCount(descriptionValue).length);
-  // console.log(descriptionValue, 'hhh');
   return (
     <>
       <View>
@@ -225,10 +186,7 @@ function EditInventory({navigation, route}: Props) {
             control={control}
             render={({field: {onChange, onBlur, value}}) => (
               <CustomInput
-                onChangeText={(text: string) => {
-                  onChange(text);
-                  setDescriptionValue(text);
-                }}
+                onChangeText={onChange}
                 value={value}
                 placeholder="A brief description"
                 label="Description"

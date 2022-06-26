@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditInventory Screen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#f5f5f5",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#f5f5f5",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 12,
+        "paddingTop": 96,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "width": "10%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": "80%",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Object {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 31,
+            "justifyContent": "center",
+            "textAlign": "center",
+          }
+        }
+      >
+        Inventory
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": "#121515",
+              "fontSize": 40,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Feather",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 48,
+      }
+    }
+  />
+  <RCTScrollView
+    ListEmptyComponent={<Memo(EmptyList) />}
+    data={Array []}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "marginTop": 340,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 133.5,
+              "width": 187.5,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/empty-folder.png",
+              }
+            }
+            style={
+              Object {
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+          />
+        </View>
+        <Text
+          allowFontScaling={false}
+          style={
+            Object {
+              "alignContent": "center",
+              "alignItems": "center",
+              "fontSize": 20,
+              "justifyContent": "center",
+              "marginTop": 24,
+              "textAlign": "center",
+            }
+          }
+        >
+          click the add icon to enter inventry
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#219653",
+        "borderRadius": 46.75,
+        "bottom": 80,
+        "elevation": 5,
+        "height": 93.5,
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+        "right": 52.5,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 2,
+        "width": 93.5,
+        "zIndex": 2,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 53.5,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Feather",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
