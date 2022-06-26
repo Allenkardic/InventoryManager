@@ -176,6 +176,5 @@ export interface InventoryManagerContextInterface {
 
 export type GlobalInventoryContent = {
   inventoryStore: inventoryStoreType[];
-  //setInventoryStore: (iStoreFunction: inventoryStoreType) => void;
   setInventoryStore: (iStoreFunction: []) => void;
 };

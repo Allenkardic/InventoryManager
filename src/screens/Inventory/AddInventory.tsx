@@ -10,7 +10,11 @@ import {StackModels} from '../../navigations/models';
 import {AuthUserContext} from '../../context/AuthUserContext';
 import {InventoryListContext} from '../../context/InventoryContext';
 
-import {stampId} from '../../utils/constants';
+import {
+  stampId,
+  checkIfItemNameExist,
+  checkWordsCount,
+} from '../../utils/constants';
 import {COLORS, SPACING} from '../../utils/themes';
 
 import {showMessage} from 'react-native-flash-message';
@@ -35,11 +39,34 @@ type FormValues = {
 };
 
 function AddInventory({navigation}: Props) {
+  const {authUserStore} = React.useContext(AuthUserContext);
+  const {inventoryStore, setInventoryStore} =
+    React.useContext(InventoryListContext);
+
+  // filter inventory base on the user that created it
+  const inventoryByUser = inventoryStore.filter(
+    item => item.userEmail === authUserStore.email,
+  );
+
   // validation schema
   const schema = yup.object().shape({
-    inventoryName: yup.string().required('Inventory name is required'),
+    inventoryName: yup
+      .string()
+      .required('Inventory name is required')
+      .test(
+        'inventoryName',
+        'Inventory name already exists',
+        (value: any) => checkIfItemNameExist(value, inventoryByUser) === false,
+      ),
     stockCount: yup.number().required('Stock count left is required'),
-    description: yup.string().required('Brief descripting is required'),
+    description: yup
+      .string()
+      .required('Brief descripting is required')
+      .test(
+        'description',
+        'Description must not be less than 3 words',
+        (value: any) => checkWordsCount(value) >= 3,
+      ),
     price: yup.number().required('Price is required'),
   });
 
@@ -51,10 +78,6 @@ function AddInventory({navigation}: Props) {
   } = useForm<FormValues>({
     resolver: yupResolver(schema),
   });
-
-  const {authUserStore} = React.useContext(AuthUserContext);
-  const {inventoryStore, setInventoryStore} =
-    React.useContext(InventoryListContext);
 
   const onSubmit = (data: FormValues) => {
     const payload = {
@@ -75,6 +98,8 @@ function AddInventory({navigation}: Props) {
     });
     navigation.navigate('Inventory');
   };
+
+  // console.log(checkIfItemNameExist('allen', inventoryStore), 'storesss');
   return (
     <>
       <View>
