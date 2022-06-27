@@ -1,5 +1,5 @@
 import React, {RefObject} from 'react';
-import {FlatList, View, ListRenderItemInfo} from 'react-native';
+import {FlatList, View, ListRenderItemInfo, StatusBar} from 'react-native';
 // components
 import InventoryCard from '../../components/InventoryCard';
 import PlusButton from '../../components/PlusButton';
@@ -63,6 +63,11 @@ function Inventory({navigation}: Props) {
 
   return (
     <View style={{backgroundColor: COLORS.smokeWhite, flex: 1}}>
+      <StatusBar
+        animated={true}
+        backgroundColor={COLORS.smokeWhite}
+        barStyle="dark-content"
+      />
       <NavigationHeader
         onPressRightIcon={handleLogout}
         rightIconName={'log-out'}

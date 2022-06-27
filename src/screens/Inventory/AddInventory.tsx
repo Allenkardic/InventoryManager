@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, TextStyle, View} from 'react-native';
+import {ScrollView, StyleSheet, TextStyle, View, StatusBar} from 'react-native';
 // components
 import NavigationHeader from '../../components/NavigationHeader';
 import CustomInput from '../../components/CustomInput';
@@ -97,6 +97,11 @@ function AddInventory({navigation}: Props) {
   return (
     <>
       <View>
+        <StatusBar
+          animated={true}
+          backgroundColor={COLORS.smokeWhite}
+          barStyle="dark-content"
+        />
         <NavigationHeader
           onPressBackBtn={() => navigation.goBack()}
           title={'Add Inventory'}

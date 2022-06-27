@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, ScrollView, TextStyle} from 'react-native';
+import {StyleSheet, View, StatusBar, TextStyle} from 'react-native';
 // components
 import CustomText from '../../components/CustomText';
 import CustomInput from '../../components/CustomInput';
@@ -69,6 +69,11 @@ function Login(props: Props) {
   };
   return (
     <View style={{...styles.container}}>
+      <StatusBar
+        animated={true}
+        backgroundColor={COLORS.secondary}
+        barStyle="dark-content"
+      />
       <View
         style={{
           ...styles.inputContainer,
